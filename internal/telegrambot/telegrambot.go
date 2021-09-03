@@ -30,15 +30,15 @@ func TelegramApi() {
 			if reflect.TypeOf(update_item.Message.Text).Kind() == reflect.String && update_item.Message.Text != "" {
 				switch update_item.Message.Text {
 				case "/start":
-					msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "Спроси у меня где ниггер\n/where_nigga")
+					msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "Спроси у меня где кролик\n/where_rabbit")
 					bot.Send(msg)
-				case "/where_nigga":
-					msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "В поле работает \nОсуждаешь?\n/osujdau")
+				case "/where_rabbi":
+					msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "В поле гуляет \nНравиться?\n/like")
 					bot.Send(msg)
-				case "/osujdau":
-					msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "Ну и вали отседова")
+				case "/like":
+					msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "Отлично, буду знать что тебе понравилось")
 					bot.Send(msg)
-					log.Printf("Номер чата и имя пользователя, который осуждает: №%d %s", update_item.Message.Chat.ID, update_item.Message.Chat.UserName)
+					log.Printf("Номер чата и имя пользователя, которому понравилось: №%d %s", update_item.Message.Chat.ID, update_item.Message.Chat.UserName)
 				default:
 					msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "Неверный запрос")
 					bot.Send(msg)
