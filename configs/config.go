@@ -2,13 +2,12 @@ package configs
 
 import (
 	"os"
-	"log"
 	"github.com/joho/godotenv"
 )
 
 func init() {
 	if err := godotenv.Load(); err != nil {
-		log.Print("No .env file found")
+		panic("No .env file found")
 	}
 }
 

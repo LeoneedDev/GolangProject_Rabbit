@@ -13,7 +13,7 @@ func TelegramApi() {
 	conf := configs.New()
 	bot, err := tgbotapi.NewBotAPI(conf.Bot.Token)
 	if err != nil {
-		log.Printf("Ошибка у бота: %s", err)
+		panic(err)
 	}
 
 	update := tgbotapi.NewUpdate(0)
