@@ -3,7 +3,7 @@ package telegrambot
 import (
 	"log"
 	"reflect"
-	"nigga/configs"
+	"rabbit/configs"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 
 )
@@ -45,7 +45,7 @@ func TelegramApi() {
 				}
 
 			} else {
-				msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "Напиши /start и узнаешь где негр")
+				msg := tgbotapi.NewMessage(update_item.Message.Chat.ID, "Напиши /start и узнаешь где кролик")
 				bot.Send(msg)
 			}
 
